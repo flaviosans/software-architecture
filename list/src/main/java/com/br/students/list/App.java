@@ -40,12 +40,12 @@ public class App {
         option = scanner.nextLine();
     }
 
-    private static void listaUsuarios(){
+    private static void listaUsuarios(){ // Encapsulamento - métodos privados
         System.out.println("Listando ...");
         listStudents.forEach(System.out::println); // Trocando loop por lambda Function (arrow function)
     }
 
-    private static void cadastraUsuario(){
+    private static void cadastraUsuario(){ // Encapsulamento - Métodos privados
         System.out.println("Digite o nome do aluno: ");
         name = scanner.nextLine();
         if (!listStudents.contains(name)) {
