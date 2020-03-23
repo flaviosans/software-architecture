@@ -1,21 +1,23 @@
 package com.br.students.list;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  * Hello world!
  */
 public class App {
     private static Scanner scanner;//foi declarado o método que irá ser utilizado no projeto no inicio da classe
-    private static List<String> listStudents;//foi mudado o nome da variavel, para o código ser mais legivel
+    private static Set<String> listStudents;//foi mudado o nome da variavel, para o código ser mais legivel
     private static boolean run;
     private static String option,name;
 
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
-        listStudents = new ArrayList<String>();
+        listStudents = new HashSet<String>();
         run = true;
 
         while (run) {
