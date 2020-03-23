@@ -16,10 +16,12 @@ public class App {
     public static void main(String[] args) {
         scanner = new Scanner(System.in);
         listStudents = new HashSet<String>();
-        run = true;
-
-        while (run) {
-            exibeMenu(); // Quebrando o código em métodos menores
+        run = true; 
+        escolhaOpcao();//quebrando o codigo em métodos separados
+    }
+    private static void escolhaOpcao(){   
+    while (run) {
+           exibeMenu(); // Quebrando o código em métodos menores
             if (option.equals("1")) {
                 cadastraUsuario(); // Quebrando o código em métodos menores
             } else if (option.equals("2")) {
