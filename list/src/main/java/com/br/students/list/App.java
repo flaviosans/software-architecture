@@ -1,8 +1,6 @@
 package com.br.students.list;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -44,16 +42,13 @@ public class App {
 
     private static void listaUsuarios(){ // Encapsulamento - métodos privados
         System.out.println("Listando ...");
-        listStudents.forEach(System.out::println); // Trocando loop por lambda Function (arrow function)
+        listStudents.forEach(System.out::println); // já havíamos feito: Trocando loop por lambda Function (arrow function)
     }
 
     private static void cadastraUsuario(){ // Encapsulamento - Métodos privados
         System.out.println("Digite o nome do aluno: ");
         name = scanner.nextLine();
-        if (!listStudents.contains(name)) {
-            listStudents.add(name);
-        } else {
+            listStudents.add(name); //Sets não armazenam repetidos, logo, se houver repetição será ignorada.
             System.out.println("O aluno já esta cadastrado!");
-        }
     }
 }
