@@ -50,7 +50,10 @@ public class App {
     private static void cadastraUsuario(){ // Encapsulamento - Métodos privados
         System.out.println("Digite o nome do aluno: ");
         name = scanner.nextLine();
+        if (!listStudents.contains(name)) {
             listStudents.add(name); //Sets não armazenam repetidos, logo, se houver repetição será ignorada.
+        }else{
             System.out.println("O aluno já esta cadastrado!");
+        }
     }
 }
